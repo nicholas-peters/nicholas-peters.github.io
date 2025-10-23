@@ -1,107 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nick Peters</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nick Peters</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-
-<body>
-  <div class="container">
-    <!--Homepage-->
-    <div class="screen active" id="homepage">
-      <div class="about-me">
-        <h1>Nick Peters</h1>
-        <p>Aspiring Software Developer</p>
-      </div>
-      <button id="open-btn">Open Portfolio</button>
-    </div>
-    <!--Portfolio-->
-    <div class="screen" id="portfolio">
-      <div class="about-me">
-        <h1>Nick Peters</h1>
-        <h3>Computer Science & Data Science at UW-Madison</h3>
-        <h3>*Currently seeking internship opportunities*</h3>
-      </div>
-      <div class="portfolio-buttons">
-        <button data-target="about">About</button>
-        <button data-target="projects">Projects</button>
-        <button data-target="skills">Skills</button>
-        <button data-target="contact">Contact</button>
-      </div>
-    </div>
-    <!--About-->
-    <div class="screen" id="about">
-      <h1 class="section-title">About Me</h1>
-      <div class="about-me-text">
-        <p>My name is Nick Peters, and I was born and raised in St. Cloud, MN</p>
-        <p>I am a sophomore at the University of Wisconsin-Madison double majoring in Computer Science and Data Science
-        </p>
-        <p>Besides coding, some of my hobbies include rock climbing, as well as playing spikeball and volleyball</p>
-      </div>
-      <button class="back-btn" data-target="portfolio">Back</button>
-    </div>
-    <!--Projects-->
-    <div class="screen" id="projects">
-      <h1 class="section-title">Projects</h1>
-      <div class="projects-container">
-        <div class="project-card">
-          <h3>put a project here</h3>
-          <p>put the project description here</p>
-          <a href="https://github.com/..." target="_blank">Put the github link here</a>
+    <body>
+        <div class="container">
+            <!--Homepage-->
+            <div class="screen active" id="homepage">
+                <div class="about-me">
+                    <h1>Nick Peters</h1>
+                    <p>Aspiring Software Developer</p>
+                </div>
+                <button id="open-btn">Open Portfolio</button>
+            </div>
+            <!--Portfolio-->
+            <div class="screen" id="portfolio">
+                <div class="about-me">
+                    <h1>Nick Peters</h1>
+                    <h3>Computer Science & Data Science at UW-Madison</h3>
+                    <h3>*Currently seeking internship opportunities*</h3>
+                </div>
+                <div class="portfolio-buttons">
+                    <button data-target="about">About</button>
+                    <button data-target="projects">Projects</button>
+                    <button data-target="skills">Skills</button>
+                    <button data-target="contact">Contact</button>
+                </div>
+            </div>
+            <!--About-->
+            <div class="screen" id="about">
+                <h1 class="section-title">About Me</h1>
+                <div class="about-me-text">
+                    <p>
+                        My name is Nick Peters, and I was born and raised in St.
+                        Cloud, MN
+                    </p>
+                    <p>
+                        I am a sophomore at the University of Wisconsin-Madison
+                        double majoring in Computer Science and Data Science
+                    </p>
+                    <p>
+                        Besides coding, some of my hobbies include rock
+                        climbing, as well as playing spikeball and volleyball
+                    </p>
+                </div>
+                <button class="back-btn" data-target="portfolio">Back</button>
+            </div>
+            <!--Projects-->
+            <div class="screen" id="projects">
+                <h1 class="section-title">Projects</h1>
+                <div class="projects-container">
+                    <div class="project-card">
+                        <h3>put a project here</h3>
+                        <p>put the project description here</p>
+                        <a href="https://github.com/..." target="_blank"
+                            >Put the github link here</a
+                        >
+                    </div>
+                    <div class="project-card">
+                        <h3>put a project here</h3>
+                        <p>put the project description here</p>
+                        <a href="https://github.com/..." target="_blank"
+                            >Put the github link here</a
+                        >
+                    </div>
+                    <div class="project-card">
+                        <h3>put a project here</h3>
+                        <p>put the project description here</p>
+                        <a href="https://github.com/..." target="_blank"
+                            >Put the github link here</a
+                        >
+                    </div>
+                </div>
+                <button class="back-btn" data-target="portfolio">Back</button>
+            </div>
+            <!--Skills-->
+            <div class="screen" id="skills">
+                <h1 class="section-title">Skills</h1>
+                <div class="skills-grid">
+                    <div class="skill-box">Java</div>
+                    <div class="skill-box">HTML/CSS</div>
+                    <div class="skill-box">JavaScript</div>
+                    <div class="skill-box">Python</div>
+                    <div class="skill-box">Version Control (Git)</div>
+                    <div class="skill-box">Mandarin Fluency</div>
+                    <div class="skill-box">Problem Solving</div>
+                    <div class="skill-box">Teamwork and Communication</div>
+                </div>
+                <button class="back-btn" data-target="portfolio">Back</button>
+            </div>
+            <!--Contact-->
+            <div class="screen" id="contact">
+                <h1 class="section-title">Contact Me</h1>
+                <div class="contact-content">
+                    <p>The best way to reach me is via email</p>
+                    <p>-</p>
+                    <div class="email-box">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>napeters3@wisc.edu</p>
+                    </div>
+                </div>
+                <button class="back-btn" data-target="portfolio">Back</button>
+            </div>
         </div>
-        <div class="project-card">
-          <h3>put a project here</h3>
-          <p>put the project description here</p>
-          <a href="https://github.com/..." target="_blank">Put the github link here</a>
+        <div class="br-buttons">
+            <a
+                class="fa-brands fa-linkedin-in"
+                href="https://www.linkedin.com/in/nick-peters-233804328/"
+                target="_blank"
+            ></a>
+            <a
+                class="fa-brands fa-github"
+                href="https://github.com/nicholas-peters/"
+                target="_blank"
+            ></a>
         </div>
-        <div class="project-card">
-          <h3>put a project here</h3>
-          <p>put the project description here</p>
-          <a href="https://github.com/..." target="_blank">Put the github link here</a>
-        </div>
-      </div>
-      <button class="back-btn" data-target="portfolio">Back</button>
-    </div>
-    <!--Skills-->
-    <div class="screen" id="skills">
-      <h1 class="section-title">Skills</h1>
-      <div class="skills-grid">
-        <div class="skill-box">Java</div>
-        <div class="skill-box">HTML/CSS</div>
-        <div class="skill-box">JavaScript</div>
-        <div class="skill-box">Python</div>
-        <div class="skill-box">Version Control (Git)</div>
-        <div class="skill-box">Mandarin Fluency</div>
-        <div class="skill-box">Problem Solving</div>
-        <div class="skill-box">Teamwork and Communication</div>
-      </div>
-      <button class="back-btn" data-target="portfolio">Back</button>
-    </div>
-    <!--Contact-->
-    <div class="screen" id="contact">
-      <h1 class="section-title">Contact Me</h1>
-      <div class="contact-content">
-        <p>The best way to reach me is via email</p>
-        <p> -</p>
-        <div class="email-box">
-          <i class="fa-solid fa-envelope"></i>
-          <p>napeters3@wisc.edu</p>
-        </div>
-      </div>
-      <button class="back-btn" data-target="portfolio">Back</button>
-    </div>
-  </div>
-  <div class="br-buttons">
-    <a class="fa-brands fa-linkedin-in" href="https://www.linkedin.com/in/nick-peters-233804328/" target="_blank"></a>
-    <a class="fa-brands fa-github" href="https://github.com/nickp82111/" target="_blank"></a>
-  </div>
-  <script src="script.js"></script>
-</body>
-
+        <script src="script.js"></script>
+    </body>
 </html>

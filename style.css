@@ -24,8 +24,7 @@ body {
 }
 
 .container {
-  background-color: white;
-  opacity: 0.9;
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 1rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   width: 100%;
@@ -38,6 +37,8 @@ body {
   align-items: center;
   overflow: hidden;
   position: relative;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
 }
 
 /* Screens */
@@ -303,4 +304,78 @@ body {
 
 .br-buttons a:hover {
   color: #276aae;
+}
+
+/* Responsive Design */
+@media (max-width: 750px) {
+  .section-title {
+    font-size: 2rem;
+    margin-top: -25px;
+  }
+}
+@media (max-width: 700px) {
+  .about-me-text {
+    font-size: 1.2rem;
+  }
+  .portfolio-buttons {
+    position: static;
+    transform: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .portfolio-buttons button {
+    width: 90%;
+    font-size: 1rem;
+    padding: 0.8rem 0;
+  }
+  .br-buttons {
+    flex-direction: column;
+    right: 5px;
+  }
+}
+@media (max-width: 600px) {
+  #homepage h1 {
+    font-size: 3rem;
+  }
+  .br-buttons {
+    flex-direction: row;
+    top: 8px;
+    bottom: auto;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  #open-btn {
+    font-size: 1rem;
+  }
+  #portfolio .about-me {
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 550px) {
+  .about-me-text {
+    margin-top: -10px;
+  }
+}
+@media (max-width: 500px) {
+  .internship-text {
+    display: none;
+  }
+  #about-me-text-3 {
+    display: none;
+  }
+  #contact p {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 450px) {
+  .container {
+    padding: 0;
+  }
+  #contact p {
+    font-size: 1.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */

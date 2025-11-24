@@ -284,6 +284,15 @@ body {
   flex-direction: row;
   justify-content: center;
   gap: 5px;
+  margin-top: 30px;
+}
+
+#contact .phone-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 15px;
 }
 
 .br-buttons {

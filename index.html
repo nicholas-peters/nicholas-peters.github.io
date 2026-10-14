@@ -3,6 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Nick Peters - Computer Science & Data Science student at UW-Madison"
+        />
         <title>Nick Peters</title>
         <link rel="stylesheet" href="style.css" />
         <link
@@ -15,149 +19,147 @@
     </head>
 
     <body>
-        <div class="container">
-            <!--Homepage-->
-            <div class="screen active" id="homepage">
-                <div class="about-me">
-                    <h1>Nick Peters</h1>
-                    <p>CompSci & DataSci</p>
-                </div>
-                <button id="open-btn">Open Portfolio</button>
-            </div>
-            <!--Portfolio-->
-            <div class="screen" id="portfolio">
-                <div class="about-me">
-                    <h1>Nick Peters</h1>
-                    <h3>Computer Science & Data Science at UW-Madison</h3>
-                    <h3 class="internship-text">
-                        *Currently seeking internship opportunities*
-                    </h3>
-                </div>
-                <div class="portfolio-buttons">
-                    <button data-target="about">About</button>
-                    <button data-target="projects">Projects</button>
-                    <button data-target="skills">Skills</button>
-                    <button data-target="contact">Contact</button>
-                </div>
-            </div>
-            <!--About-->
-            <div class="screen" id="about">
-                <h1 class="section-title">About Me</h1>
-                <div class="about-me-text">
+        <main class="container">
+            <!-- Homepage -->
+            <section class="screen active" id="homepage">
+                <h1>Nick Peters</h1>
+                <p class="subtitle">CompSci &amp; DataSci</p>
+                <button class="btn" data-target="portfolio">Open Portfolio</button>
+            </section>
+
+            <!-- Portfolio -->
+            <section class="screen" id="portfolio">
+                <h1>Nick Peters</h1>
+                <p class="subtitle">Computer Science &amp; Data Science at UW-Madison</p>
+                <p class="tagline">Currently seeking internship opportunities</p>
+                <nav class="nav">
+                    <button class="btn" data-target="about">About</button>
+                    <button class="btn" data-target="projects">Projects</button>
+                    <button class="btn" data-target="skills">Skills</button>
+                    <button class="btn" data-target="contact">Contact</button>
+                </nav>
+            </section>
+
+            <!-- About -->
+            <section class="screen" id="about">
+                <h2>About Me</h2>
+                <div class="about-text">
                     <p>
-                        My name is Nick Peters, a student studying Computer
-                        Science and Data Science at the University of
-                        Wisconsin-Madison.
+                        I'm Nick Peters, a student studying Computer Science and
+                        Data Science at the University of Wisconsin-Madison.
                     </p>
                     <p>
-                        I am interested in building user-focused web
-                        applications, as well as using data to solve real-world
-                        problems
+                        I'm interested in building user-focused web applications
+                        and using data to solve real-world problems.
                     </p>
-                    <p id="about-me-text-3">
-                        Feel free to contact me regarding any potential opportunities
-                    </p>
+                    <p>Feel free to reach out about any potential opportunities.</p>
                 </div>
-                <button class="back-btn" data-target="portfolio">Back</button>
-            </div>
-            <!--Projects-->
-            <div class="screen" id="projects">
-                <h1 class="section-title">Projects</h1>
-                <div class="projects-container">
-                    <div class="project-card">
+                <button class="btn back" data-target="portfolio">Back</button>
+            </section>
+
+            <!-- Projects -->
+            <section class="screen" id="projects">
+                <h2>Projects</h2>
+                <div class="projects">
+                    <article class="card">
                         <h3>Spending Visualizer</h3>
                         <p>
-                            This <span class="bold">Python</span> app allows a
-                            user to submit a bank statement CSV file,
-                            specifically tailored to those who use the mobile
-                            banking company, Chime. Once inputted, this app
-                            allows the user to set categories for each of their
-                            purchases, which is stored in a json file, allowing
-                            the user to save time categorizing common expenses.
-                            This app uses <span class="bold">Pandas</span> to
-                            process and manipulate CSV data
-                            <span class="bold">Streamlit</span> to display
-                            information in a clean and organized way
-                            <span class="bold">Plotly</span> to generate
-                            interactive charts and graphs
+                            A <b>Python</b> app that turns a Chime bank statement
+                            CSV into an interactive spending breakdown. Purchase
+                            categories are saved to JSON so common expenses only
+                            need to be labeled once.
                         </p>
+                        <p class="tech">Pandas · Streamlit · Plotly</p>
                         <a
                             href="https://github.com/nicholas-peters/spending-visualizer"
                             target="_blank"
-                            >View Github Repository</a
+                            rel="noopener"
+                            >View on GitHub</a
                         >
-                    </div>
-                    <div class="project-card">
+                    </article>
+                    <article class="card">
                         <h3>Code Sharing App</h3>
-                                            <p>
-                                                A full-stack code sharing web application built with <span class="bold">Express</span> and <span class="bold">Node</span> that allows users to create, save, duplicate, and view code.
-                                                Additionally, the application uses <span class="bold">MongoDB</span> with Mongoose for data storage allowing code to be shared between users.
-                                                The app utilizes EJS for server-side rendering with dynamic page templates, and Highlight.js
-                                                for syntax highlighting with multi-language support and detection.
-
-                                            </p>
-                        <a href="https://github.com/nicholas-peters/CodeSharing" target="_blank"
-                            >View Github Repository</a
+                        <p>
+                            A full-stack web app for creating, saving, duplicating,
+                            and sharing code snippets, with server-side rendered
+                            pages and multi-language syntax highlighting.
+                        </p>
+                        <p class="tech">Node · Express · MongoDB · EJS · Highlight.js</p>
+                        <a
+                            href="https://github.com/nicholas-peters/CodeSharing"
+                            target="_blank"
+                            rel="noopener"
+                            >View on GitHub</a
                         >
-                    </div>
-                    <div class="project-card">
-                        <h3>Campus Navigator App</h3>
-                        <p>A collaborative <span class="bold">Java</span> web app modeling the UW Madison campus as a weighted digraph using custom
-                        implementations for several data structures, including maps, graphs, and hashtables, as well as 
-                        an implementation of Dijkstra’s algorithm to correctly identify the shortest path between two nodes.
-                        featuring numerous JUnit tests used throughout the development process to identify potential design flaws
-</p>
-                        <a href="https://youtu.be/gHAA8cmAbzk" target="_blank"
+                    </article>
+                    <article class="card">
+                        <h3>Campus Navigator</h3>
+                        <p>
+                            A collaborative <b>Java</b> web app that models the
+                            UW-Madison campus as a weighted digraph and finds
+                            shortest paths with Dijkstra's algorithm, built on
+                            custom map, graph, and hashtable implementations.
+                        </p>
+                        <p class="tech">Java · JUnit</p>
+                        <a href="https://youtu.be/gHAA8cmAbzk" target="_blank" rel="noopener"
                             >View Demo Video</a
                         >
-                    </div>
+                    </article>
                 </div>
-                <button class="back-btn" data-target="portfolio">Back</button>
-            </div>
-            <!--Skills-->
-            <div class="screen" id="skills">
-                <h1 class="section-title">Skills</h1>
-                <div class="skills-grid">
-                    <div class="skill-box">Java</div>
-                    <div class="skill-box">HTML/CSS</div>
-                    <div class="skill-box">JavaScript</div>
-                    <div class="skill-box">Python</div>
-                    <div class="skill-box">Version Control (Git)</div>
-                    <div class="skill-box">React</div>
-                    <div class="skill-box">Express</div>
-                    <div class="skill-box">Teamwork and Communication</div>
-                </div>
-                <button class="back-btn" data-target="portfolio">Back</button>
-            </div>
-            <!--Contact-->
-            <div class="screen" id="contact">
-                <h1 class="section-title">Contact Me</h1>
-                <div class="contact-content">
-                    <p>The best way to reach me is via email or phone</p>
-                    <div class="email-box">
+                <button class="btn back" data-target="portfolio">Back</button>
+            </section>
+
+            <!-- Skills -->
+            <section class="screen" id="skills">
+                <h2>Skills</h2>
+                <ul class="skills">
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>HTML/CSS</li>
+                    <li>React</li>
+                    <li>Express</li>
+                    <li>Git</li>
+                    <li>Teamwork &amp; Communication</li>
+                </ul>
+                <button class="btn back" data-target="portfolio">Back</button>
+            </section>
+
+            <!-- Contact -->
+            <section class="screen" id="contact">
+                <h2>Contact Me</h2>
+                <p>The best way to reach me is by email or phone.</p>
+                <ul class="contact-list">
+                    <li>
                         <i class="fa-solid fa-envelope"></i>
-                        <p>napeters3@wisc.edu</p>
-                    </div>
-                    <div class="phone-box">
+                        <a href="mailto:napeters3@wisc.edu">napeters3@wisc.edu</a>
+                    </li>
+                    <li>
                         <i class="fa-solid fa-phone"></i>
-                        <p>(320) 470-0240</p>
-                    </div>
-                </div>
-                <button class="back-btn" data-target="portfolio">Back</button>
-            </div>
-        </div>
-        <div class="br-buttons">
+                        <a href="tel:+13204700240">(320) 470-0240</a>
+                    </li>
+                </ul>
+                <button class="btn back" data-target="portfolio">Back</button>
+            </section>
+        </main>
+
+        <div class="socials">
             <a
                 class="fa-brands fa-linkedin-in"
                 href="https://www.linkedin.com/in/nick-peters-233804328/"
                 target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
             ></a>
             <a
                 class="fa-brands fa-github"
                 href="https://github.com/nicholas-peters/"
                 target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
             ></a>
         </div>
+
         <script src="script.js"></script>
     </body>
 </html>

@@ -1,28 +1,10 @@
 const screens = document.querySelectorAll(".screen");
-const openBtn = document.getElementById("open-btn");
-const portfolioButtons = document.querySelectorAll(".portfolio-buttons button");
-const backButtons = document.querySelectorAll(".back-btn");
 
 function showScreen(id) {
-  screens.forEach(screen => screen.classList.remove("active"));
-  document.getElementById(id).classList.add("active");
+  screens.forEach(screen => screen.classList.toggle("active", screen.id === id));
 }
 
-// open portfolio
-openBtn.addEventListener("click", () => showScreen("portfolio"));
-
-// open subpages
-portfolioButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const target = btn.dataset.target;
-    showScreen(target);
-  });
-});
-
-// back btns
-backButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const target = btn.dataset.target;
-    showScreen(target);
-  });
+// every button with a data-target switches to that screen
+document.querySelectorAll("[data-target]").forEach(btn => {
+  btn.addEventListener("click", () => showScreen(btn.dataset.target));
 });

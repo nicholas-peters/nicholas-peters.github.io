@@ -2,6 +2,7 @@ const screens = document.querySelectorAll(".screen");
 
 function showScreen(id) {
   screens.forEach(screen => screen.classList.toggle("active", screen.id === id));
+  window.scrollTo(0, 0);
 }
 
 // every button with a data-target switches to that screen
